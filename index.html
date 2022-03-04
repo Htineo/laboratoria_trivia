@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">    
+    <title>Trivia</title>
+    <link href="assets/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <main>
+        <!--Inicio Seccion bienvenida -->
+        <section id="welcome">
+            <h1>Bienvenido a la trivia</h1>
+            <form class="container"  id="form_welcome">
+                <input  id="input-nombre" class="input-nombre" type="text" name="nombre" placeholder="Ingresar Nombre:" />
+                <button type="button" onclick="getName();" >
+                    Comenzar
+                </button>
+            </form>
+        </section>
+        <!--Fin Seccion bienvenida -->
+        <!--Inicio Seccion trivia -->
+        <section class="container" id="trivia">
+          <h1 id="nombre"></h1>
+          <form id="form_trivia">
+            <p><strong> 1. ¿Cuál es la unidad básica de la vida?</strong></p>
+
+            <input type="radio" id="option_1a" name="question_1" value="celula" required/>
+            <label for="option_1a"> a. Célula</label>
+            <br />
+
+            <input type="radio" id="option_1b" name="question_1" value="hueso" />
+            <label for="option_1b"> b. Hueso</label>
+            <br />
+
+            <input type="radio" id="option_1c" name="question_1" value="virus" />
+            <label for="option_1c"> c. Virus</label>
+            <br />
+            <p  class="status_question" id="question_1_status"></p>
+            <p class="correct_question" id="correct_question_1">
+              La respuesta es:  a. Célula
+            </p>
+
+            <p><strong>2. ¿De qué células está compuesto la sangre?</strong></p>
+
+            <input type="radio" id="option_2a" name="question_2" value="tibia,radio,femur" required />
+            <label for="option_2a"> a. Tibia, radio, femur</label>
+            <br />
+
+            <input type="radio" id="option_2b" name="question_2" value="plaquetas,globulos rojos,leucocitos" />
+            <label for="option_2b"> b. Plaquetas, globulos rojos, leucocitos</label><br />
+
+            <input type="radio" id="option_2c" name="question_2" value="parásitos,bacterias,virus" />
+            <label for="option_2c"> c. Parásitos, bacterias, virus</label>
+            <br />
+            <p class="status_question " id="question_2_status"></p>
+            <p class="correct_question " id="correct_question_2">
+              La respuesta es: b. Plaquetas, globulos rojos, leucocitos
+            </p>
+
+            <p><strong>3. ¿Qué porcentaje de agua tiene el cuerpo humano?</strong></p>
+
+            <input type="radio" id="option_3a" name="question_3" value="(50-70)%" required />
+            <label for="option_3a"> a. (50-70)%</label>
+            <br />
+
+            <input type="radio" id="option_3b" name="question_3" value="90%" />
+            <label for="option_3b"> b. 90%</label>
+            <br />
+
+            <input type="radio" id="option_3c" name="question_3" value="30%" />
+            <label for="option_3c"> c. 30%</label>
+            <br />
+            
+            <p class="status_question" id="question_3_status"></p>
+            <p class="correct_question" id="correct_question_3">
+              La respuesta es:  a. (50-70)%
+            </p>
+            <br />
+          
+            <button type="button" onclick="getValues();"  >
+                Responder y ver resultado
+            </button>
+            <button type="button" onclick="window.location.reload();" >
+                Volver a jugar
+            </button>
+            </form>
+        </section>
+      <!--Fin Seccion trivia -->
+        <script src="assets/script.js"></script>
+    </main>
+</body>
+</html>
